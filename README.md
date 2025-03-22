@@ -4,6 +4,7 @@ Setup & Run Instructions
 
 Follow the steps below to set up and run the project in VS Code PowerShell Terminal:
 
+**Skip First Step
 Step 1: Create and Activate a Virtual Environment
 
     Open VS Code and run the following commands in the PowerShell Terminal:

@@ -2,9 +2,12 @@ Instagram Scraper & Auto-Poster
 
 Setup & Run Instructions
 
+First make sure to have latest python version 3.13 
+
 Follow the steps below to set up and run the project in VS Code PowerShell Terminal:
 
-**Skip First Step
+**Skip First Step(Step 1)
+
 Step 1: Create and Activate a Virtual Environment
 
     Open VS Code and run the following commands in the PowerShell Terminal:
@@ -12,6 +15,8 @@ Step 1: Create and Activate a Virtual Environment
     python -m venv venv                              # Create a virtual environment
     Set-ExecutionPolicy Unrestricted -Scope Process  # Allow script execution
     venv\Scripts\activate                            # Activate the virtual environment
+**Skip First Step(Step 1)
+
 
 Step 2: Install Required Libraries
 

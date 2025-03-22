@@ -4,3 +4,5 @@ bs4                             # it is a library for web scraping which helps i
 undetected-chromedriver         # it is a tool for managing the browser drivers automatically.
 emoji                           # it is a library for adding emojis to the text.
 requests                        # it is a library for sending HTTP requests in Python.
+setuptools                      # it is a library for packaging and distributing Python projects.
+disutils                        # it is a library for packaging and distributing Python projects.

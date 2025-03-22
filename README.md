@@ -76,8 +76,6 @@ Project Structure & File Descriptions
 
         Posts the cleaned caption and image to Twitter/X.
 
-        Uses API authentication for secure posting.
-
     main.py
 
         The central script that runs all the above functionalities in sequence.

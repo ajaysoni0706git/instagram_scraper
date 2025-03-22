@@ -9,7 +9,7 @@ from modules.post_tweet import post_tweet
 
 def main():
     try:
-        # User inputs
+        # taking user input
         target_username = input("Enter the Instagram username to fetch the latest post: ").strip()
 
         twitter_acc_login = input("Do you want to use your X.com (Twitter) account for posting? (y/n): ").strip().lower()

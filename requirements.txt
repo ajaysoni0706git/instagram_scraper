@@ -1,0 +1,6 @@
+selenium                        # It helps in browser automation.
+webdriver_manager               # it is a tool for managing the browser drivers automatically.
+bs4                             # it is a library for web scraping which helps in parsing and extracting the data from the HTML pages.
+undetected-chromedriver         # it is a tool for managing the browser drivers automatically.
+emoji                           # it is a library for adding emojis to the text.
+requests                        # it is a library for sending HTTP requests in Python.

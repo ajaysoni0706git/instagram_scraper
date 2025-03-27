@@ -12,7 +12,7 @@ def main():
         # taking user input
         target_username = input("Enter the Instagram username to fetch the latest post: ").strip()
 
-        twitter_acc_login = input("Do you want to use your X.com (Twitter) account for posting? (y/n): ").strip().lower()
+        twitter_acc_login = input("Do you want to use your personal X.com (Twitter) account for posting? (y/n): ").strip().lower()
         if twitter_acc_login == "y":
             twitter_username = input("Enter your X.com (Twitter) username: ").strip()
             twitter_password = getpass.getpass("Enter your X.com (Twitter) password: ").strip()

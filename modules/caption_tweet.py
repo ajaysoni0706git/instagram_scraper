@@ -31,7 +31,7 @@ def summarize_with_chatgpt(caption):
         time.sleep(1)
 
         # Enter the prompt
-        prompt = f"Summarize this Instagram caption into a tweet in less than 280 words: {caption}"
+        prompt = f"Summarize this into a small tweet with atmost 280 characters: {caption}"
         for char in prompt:
             input_box.send_keys(char)
             time.sleep(0.05)  # Simulating human-like typing
@@ -57,5 +57,7 @@ def summarize_with_chatgpt(caption):
         if summary is not None:
             if driver:
                 driver.quit()
+
+    tweet = summary[:280]            
                 
-    return summary
+    return tweet

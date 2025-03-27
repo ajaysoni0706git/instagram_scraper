@@ -17,6 +17,7 @@ def main():
             twitter_username = input("Enter your X.com (Twitter) username: ").strip()
             twitter_password = getpass.getpass("Enter your X.com (Twitter) password: ").strip()
         else:
+            print("Using a dummy account for testing.")
             twitter_username = "abc_test12345"  #this is a dummy account for testing
             twitter_password = "Test@1234567890"
         

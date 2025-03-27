@@ -11,6 +11,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 def summarize_with_chatgpt(caption):
 
+    caption = "The world is a book and those who do not travel read only one page."
+
     options = uc.ChromeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--start-maximized")
@@ -31,7 +33,7 @@ def summarize_with_chatgpt(caption):
         time.sleep(1)
 
         # Enter the prompt
-        prompt = f"Summarize this Instagram caption into a tweet in 280 characters maximum: {caption}"
+        prompt = f"Summarize this Instagram caption into a tweet in less than 280 words: {caption}"
         for char in prompt:
             input_box.send_keys(char)
             time.sleep(0.05)  # Simulating human-like typing
@@ -39,11 +41,14 @@ def summarize_with_chatgpt(caption):
         input_box.send_keys(Keys.ENTER)
         logging.info("✅ Prompt submitted to ChatGPT.")
 
+        time.sleep(3)
+
         # Wait for the response
         response_element = WebDriverWait(driver, 15).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "div.markdown"))
         )
         summary = response_element.text
+        print(summary)
         logging.info(f"✅ Summary received: {summary}")
 
     except Exception as e:
@@ -51,7 +56,8 @@ def summarize_with_chatgpt(caption):
         summary = f"Error: {str(e)}"
 
     finally:
-        if driver:
-            driver.quit()
-
+        if summary is not None:
+            if driver:
+                driver.quit()
+                
     return summary

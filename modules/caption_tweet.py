@@ -11,8 +11,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 def summarize_with_chatgpt(caption):
 
-    caption = "The world is a book and those who do not travel read only one page."
-
     options = uc.ChromeOptions()
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--start-maximized")

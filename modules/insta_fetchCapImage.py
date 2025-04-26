@@ -97,5 +97,9 @@ def clean_caption(caption):
     if caption:
         caption = re.sub(r'\s+', ' ', caption).strip() # Remove extra spaces & newlines
         cleaned_caption = emoji.replace_emoji(caption, replace='')  # Remove emojis
+        caption = re.sub(r'[^\w\s.,@#-]', '', caption)  # Remove special characters except for ., @, #, and -
+        caption = re.sub(r"[^a-zA-Z0-9#@.,!?'\-\" ]", '', caption)  # Remove unwanted characters
+        caption = re.sub(r'http\S+', '', caption)
+       # caption = re.sub(r'www\S+', '', caption)
         return cleaned_caption
     return "No caption found."

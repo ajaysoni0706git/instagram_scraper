@@ -31,7 +31,7 @@ def summarize_with_chatgpt(caption):
         time.sleep(1)
 
         # Enter the prompt
-        prompt = f"Summarize this into a small tweet with atmost 280 characters: {caption}"
+        prompt = f"Summarize this into a small tweet with atmost 280 characters without any icons or fonts: {caption}"
         for char in prompt:
             input_box.send_keys(char)
             time.sleep(0.05)  # Simulating human-like typing
